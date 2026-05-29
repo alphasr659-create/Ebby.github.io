@@ -5,20 +5,34 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ebenezer</title>
 
-<style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 
+<style>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, sans-serif;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-background:#000;
+background:#050816;
 color:white;
-text-align:center;
 overflow-x:hidden;
+}
+
+body::before{
+content:'';
+position:fixed;
+width:100%;
+height:100%;
+background:radial-gradient(circle,#00aaff20,#050816 70%);
+z-index:-1;
+}
+
+section{
+padding:80px 8%;
 }
 
 .hero{
@@ -27,112 +41,318 @@ display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-padding:20px;
+text-align:center;
+}
+
+.profile{
+width:260px;
+height:260px;
+object-fit:cover;
+border-radius:30px;
+border:3px solid #00bfff;
+box-shadow:0 0 40px #00bfff;
+margin-bottom:30px;
+}
+
+.tagline{
+letter-spacing:8px;
+color:#00bfff;
+font-weight:600;
+margin-bottom:20px;
+}
+
+h1{
+font-size:5rem;
+font-weight:900;
+}
+
+.subtitle{
+font-size:1.3rem;
+margin-top:15px;
+color:#cbd5e1;
+}
+
+.verse{
+margin-top:30px;
+max-width:800px;
+font-style:italic;
+font-size:1.1rem;
+color:#d1d5db;
+}
+
+.btns{
+margin-top:40px;
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.btn{
+text-decoration:none;
+padding:15px 35px;
+border-radius:12px;
+font-weight:600;
+border:2px solid #00bfff;
+color:white;
+transition:.3s;
+}
+
+.btn:hover{
+background:#00bfff;
+color:black;
+box-shadow:0 0 20px #00bfff;
+}
+
+.title{
+font-size:3rem;
+margin-bottom:40px;
+color:#00bfff;
+font-weight:900;
+text-align:center;
+}
+
+.about{
+max-width:900px;
+margin:auto;
+text-align:center;
+font-size:1.1rem;
+line-height:2;
+color:#d6d6d6;
+}
+
+.skills{
+display:grid;
+gap:30px;
+max-width:800px;
+margin:auto;
+}
+
+.skill h3{
+margin-bottom:10px;
+}
+
+.bar{
+height:14px;
+background:#1e293b;
+border-radius:20px;
+overflow:hidden;
+}
+
+.fill{
+height:100%;
+background:linear-gradient(90deg,#00bfff,#00e5ff);
+border-radius:20px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.gallery img{
+width:100%;
+height:350px;
+object-fit:cover;
+border-radius:20px;
+border:2px solid #00bfff30;
+transition:.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.03);
+box-shadow:0 0 25px #00bfff;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:rgba(255,255,255,.04);
+border:1px solid rgba(255,255,255,.08);
+backdrop-filter:blur(10px);
+padding:30px;
+border-radius:25px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 0 25px #00bfff40;
+}
+
+.card h3{
+color:#00bfff;
+margin-bottom:15px;
+}
+
+footer{
+padding:40px;
+text-align:center;
+color:#94a3b8;
+}
+
+@media(max-width:768px){
+
+h1{
+font-size:3rem;
 }
 
 .profile{
 width:220px;
 height:220px;
-border-radius:25px;
-object-fit:cover;
-box-shadow:0 0 30px orange;
-margin-bottom:25px;
 }
 
-h1{
-font-size:4rem;
-font-weight:900;
+.title{
+font-size:2.3rem;
 }
 
-.tagline{
-letter-spacing:5px;
-color:orange;
-margin:15px 0;
 }
-
-.bio{
-max-width:700px;
-font-size:1.1rem;
-line-height:1.8;
-margin-top:20px;
-}
-
-.verse{
-margin-top:25px;
-font-style:italic;
-color:#ccc;
-}
-
-.interests{
-margin-top:40px;
-display:flex;
-gap:15px;
-flex-wrap:wrap;
-justify-content:center;
-}
-
-.card{
-padding:15px 25px;
-border:1px solid orange;
-border-radius:15px;
-}
-
-.buttons{
-margin-top:40px;
-}
-
-.btn{
-padding:15px 35px;
-text-decoration:none;
-color:white;
-border:1px solid orange;
-margin:10px;
-display:inline-block;
-border-radius:10px;
-}
-
-.btn:hover{
-background:orange;
-color:black;
-}
-
 </style>
 </head>
+
 <body>
 
 <section class="hero">
 
 <img src="profile.jpg" class="profile">
 
-<p class="tagline">CHRISTIAN • CREATOR • DREAMER</p>
+<div class="tagline">
+FRIEND • EDITOR • LISTENER
+</div>
 
 <h1>EBENEZER</h1>
 
-<div class="bio">
-B.Sc Nursing Student | Passionate about Cricket, Music,
-Photo Editing and Photography. Striving to glorify God through
-every talent and opportunity.
+<div class="subtitle">
+B.Sc Student • Cricket Enthusiast
 </div>
 
 <div class="verse">
-"I can do all things through Christ who strengthens me."
-<br>
-Philippians 4:13
+"O Lord God, remember me, I pray! Strengthen me, I pray, just this once, O God."
+<br><br>
+<b>Judges 16:28</b>
 </div>
 
-<div class="interests">
-<div class="card">🏏 Cricket</div>
-<div class="card">🎵 Music</div>
-<div class="card">🎬 Editing</div>
-<div class="card">📷 Photography</div>
-</div>
+<div class="btns">
+<a href="https://instagram.com/ebby.ej" class="btn" target="_blank">Instagram</a>
 
-<div class="buttons">
-<a href="#" class="btn">Instagram</a>
-<a href="#" class="btn">Explore</a>
+<a href="https://wa.me/916385776215" class="btn" target="_blank">WhatsApp</a>
 </div>
 
 </section>
+
+<section>
+
+<h2 class="title">ABOUT</h2>
+
+<div class="about">
+I am Ebenezer, a B.Sc student with a passion for cricket, editing and meaningful conversations. I value friendship, listening and helping others grow. My strength comes from God and I strive to use my talents for His glory.
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">SKILLS</h2>
+
+<div class="skills">
+
+<div class="skill">
+<h3>🏏 Cricket</h3>
+<div class="bar">
+<div class="fill" style="width:90%"></div>
+</div>
+</div>
+
+<div class="skill">
+<h3>🎬 Editing</h3>
+<div class="bar">
+<div class="fill" style="width:85%"></div>
+</div>
+</div>
+
+<div class="skill">
+<h3>👂 Listener</h3>
+<div class="bar">
+<div class="fill" style="width:95%"></div>
+</div>
+</div>
+
+<div class="skill">
+<h3>🤝 Friendship</h3>
+<div class="bar">
+<div class="fill" style="width:100%"></div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">INTERESTS</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🏏 Cricket</h3>
+<p>Passionate about the game and team spirit.</p>
+</div>
+
+<div class="card">
+<h3>🎬 Editing</h3>
+<p>Creating visuals and bringing ideas to life.</p>
+</div>
+
+<div class="card">
+<h3>👂 Listener</h3>
+<p>Always ready to listen and understand others.</p>
+</div>
+
+<div class="card">
+<h3>🤝 Friend</h3>
+<p>Building meaningful and lasting connections.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">GALLERY</h2>
+
+<div class="gallery">
+
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+<img src="photo4.jpg">
+<img src="photo5.jpg">
+<img src="photo6.jpg">
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+“Thus far the Lord has helped us.”
+<br>
+— 1 Samuel 7:12
+</p>
+
+<br>
+
+<p>© 2026 Ebenezer</p>
+
+</footer>
 
 </body>
 </html>
